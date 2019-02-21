@@ -26,9 +26,12 @@ end
 def bulk_tweet_shortener (arr_of_tweets)
 result = []
   arr_of_tweets.collect do |tweet|
-     tweet.gsub(/\w+/) do |w|
-     dictionary.fetch(w,w)
+     tweet.gsub(/\w...+/) do |w|
+
+     result.push(dictionary.fetch(w,w))
+
   end
 end
-end  
+result.join(" ")
+end   
 
