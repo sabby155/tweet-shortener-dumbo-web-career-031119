@@ -18,19 +18,17 @@ end
 
 
 def word_substituter (tweet)
- tweet.gsub(/\w+/) do |w|
-  dictionary.fetch(w,w)
-  end
+  tweet = tweet.split(" ")
+  
+  tweet.each do |word|
+  dictionary.collect do |k,v|
+  if k == word
+  word.replace(v)
+  end 
 end 
-
-def bulk_tweet_shortener (arr_of_tweets)
-result = []
-  arr_of_tweets.collect do |tweet|
-     tweet.gsub(/\w...+/) do |w|
-     result.push(dictionary.fetch(w,w))
-
-  end
+end 
+  tweet.join(" ")
 end
-puts result.join(" ")
-end   
+
+
 
