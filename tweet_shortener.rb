@@ -32,6 +32,6 @@ result = []
 
   end
 end
-result.join(" ")
+puts result.join(" ")
 end   
 
