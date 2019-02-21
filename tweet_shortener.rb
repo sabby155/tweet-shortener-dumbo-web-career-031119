@@ -36,6 +36,6 @@ def bulk_tweet_shortener (arr_of_tweets)
   arr_of_tweets.collect do |tweet|
   result << word_substituter(tweet)
   end 
-  puts result
+  puts result.join(" ")
 end  
 
