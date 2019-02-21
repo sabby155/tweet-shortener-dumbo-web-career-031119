@@ -38,3 +38,5 @@ def bulk_tweet_shortener (arr_of_tweets)
   puts word_substituter(tweet)
   end
 end 
+
+def 
